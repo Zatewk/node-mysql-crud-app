@@ -1,0 +1,24 @@
+{
+  "name": "mysql-crud-app",
+  "version": "1.0.0",
+  "description": "a simple tool to learn how to connect node with mysql",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Zatewk/node-mysql-crud-app.git"
+  },
+  "keywords": [
+    "node",
+    "mysql",
+    "javascript"
+  ],
+  "author": "Zatewk",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Zatewk/node-mysql-crud-app/issues"
+  },
+  "homepage": "https://github.com/Zatewk/node-mysql-crud-app#readme"
+}
