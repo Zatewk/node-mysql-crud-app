@@ -24,12 +24,14 @@ module.exports = {
         image_name = username + '.' + fileExtension;
 
         let usernameQuery = "SELECT * FROM `players` WHERE user_name = '" + username + "'";
-
+        console.log('llego hasta aquí');
         db.query(usernameQuery, (err, result) => {
             if (err) {
-                return res.status(500).send(err);
+                db.on('error', function(err) {
+                    return res.status(500).send(err);
+                });
             }
-            if (result.length > 0) {
+            if (typeof result !== 'undefined' && result.length > 0) {
                 message = 'Username already exists';
                 res.render('add-player.ejs', {
                     message,
