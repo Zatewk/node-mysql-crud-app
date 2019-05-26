@@ -12,17 +12,12 @@ const port = 5000;
 const db = mysql.createConnection ({
 	host: 'localhost',
 	user: 'root',
-	password: '',
+	password: 'nmtlc01',
 	database: 'socka'
 });
 
 db.connect((err) => {
-	if (err){
-		//throw err;
-		db.on('error', function(err) {
-			console.log("[mysql error]",err);
-		});
-	}
+	if (err) throw err;
 	console.log('Connected to database');
 })
 global.db = db;

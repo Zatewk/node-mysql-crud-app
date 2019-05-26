@@ -5,12 +5,8 @@ module.exports = {
         // execute query
         db.query(query, (err, result) => {
 
-            if (err) {
-                db.on('error', function(err) {
-                    //console.log("[mysql error]",err);
-                    res.redirect('/');
-                });
-            }
+            if (err) res.redirect('/');
+
             res.render('index.ejs', {
                 title: "Welcome to Socka | View Players"
                 ,players: result
